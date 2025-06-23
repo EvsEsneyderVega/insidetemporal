@@ -1,0 +1,79 @@
+<!-- <input type="text" id="miInput" placeholder="Escribe algo...">
+<div id="sugerencias" style="border: 1px solid #ccc; max-height: 100px; overflow-y: auto;"></div>
+<script>
+  const datos = ["Manzana", "Mandarina", "Mango", "Melón", "Melocotón", "Pera", "Plátano", "Piña"];
+  const input = document.getElementById('miInput');
+  const sugerencias = document.getElementById('sugerencias');
+
+  input.addEventListener('input', () => {
+    const texto = input.value.toLowerCase();
+    sugerencias.innerHTML = '';
+
+    if (texto) {
+      const resultados = datos.filter(item => item.toLowerCase().includes(texto));
+
+      resultados.forEach(item => {
+        const div = document.createElement('div');
+        div.textContent = item;
+        div.style.cursor = "pointer";
+        div.addEventListener('click', () => {
+          input.value = item;
+          sugerencias.innerHTML = '';
+        });
+        sugerencias.appendChild(div);
+      });
+    }
+  });
+</script> -->
+
+<select id="marca">
+  <option value="">Seleccione una marca</option>
+  <option value="toyota">Toyota</option>
+  <option value="ford">Ford</option>
+</select>
+
+<select id="linea">
+  <option value="">Seleccione una línea</option>
+</select>
+
+<div id="loader" style="display:none;">Cargando líneas...</div>
+
+<script>
+  const marcaSelect = document.getElementById("marca");
+  const lineaSelect = document.getElementById("linea");
+  const loader = document.getElementById("loader");
+
+  marcaSelect.addEventListener("change", () => {
+    const marca = marcaSelect.value;
+
+    if (!marca) return;
+
+    // Mostrar loader
+    loader.style.display = "block";
+
+    // Simulación de llamada al API (usa fetch en un caso real)
+    setTimeout(() => {
+      let lineas = [];
+
+      if (marca === "toyota") {
+        lineas = ["Corolla", "Hilux", "Yaris"];
+      } else if (marca === "ford") {
+        lineas = ["Fiesta", "Focus", "Ranger"];
+      }
+
+      // Limpiar select de línea
+      lineaSelect.innerHTML = '<option value="">Seleccione una línea</option>';
+
+      // Llenar con los resultados
+      lineas.forEach(linea => {
+        const opt = document.createElement("option");
+        opt.value = linea.toLowerCase();
+        opt.textContent = linea;
+        lineaSelect.appendChild(opt);
+      });
+
+      // Ocultar loader
+      loader.style.display = "none";
+    }, 1500); // Simulando retardo de red
+  });
+</script>
