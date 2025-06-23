@@ -71,16 +71,9 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" list="listaPais" id="paispersona" name="paispersona"
+											<input type="text" class="form-control" id="telefono" name="telefono"
 												required>
-											<span class="label">País</span>
-											<datalist id="listaPais">
-												<option value="San Francisco">
-												<option value="New York">
-												<option value="Seattle">
-												<option value="Los Angeles">
-												<option value="Chicago">
-											</datalist>
+											<span class="label">Telefono</span>
 										</label>
 									</div>
 								</div>
@@ -88,16 +81,57 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="telefono" name="telefono"
-												required>
-											<span class="label">Telefono</span>
+											<input type="text" class="form-control" list="listaPais" id="paispersona"
+												name="paispersona" required>
+											<span class="label">País</span>
+											<datalist id="listaPais">
+												<option value="COLOMBIA">
+												<option value="VENEZUELA">
+												<option value="BRASIL">
+												<option value="PERU">
+												<option value="ECUADOR">
+											</datalist>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="telefono" name="telefono"
+											<input type="text" list="departamentos" class="form-control" id="telefono" name="telefono"
 												required>
 											<span class="label">Departamento</span>
+											<datalist id="departamentos">
+												<option value="Amazonas">
+												<option value="Antioquia">
+												<option value="Arauca">
+												<option value="Atlántico">
+												<option value="Bolívar">
+												<option value="Boyacá">
+												<option value="Caldas">
+												<option value="Caquetá">
+												<option value="Casanare">
+												<option value="Cauca">
+												<option value="Cesar">
+												<option value="Chocó">
+												<option value="Córdoba">
+												<option value="Cundinamarca">
+												<option value="Guainía">
+												<option value="Guaviare">
+												<option value="Huila">
+												<option value="La Guajira">
+												<option value="Magdalena">
+												<option value="Meta">
+												<option value="Nariño">
+												<option value="Norte de Santander">
+												<option value="Putumayo">
+												<option value="Quindío">
+												<option value="Risaralda">
+												<option value="San Andrés y Providencia">
+												<option value="Santander">
+												<option value="Sucre">
+												<option value="Tolima">
+												<option value="Valle del Cauca">
+												<option value="Vaupés">
+												<option value="Vichada">
+											</datalist>
 										</label>
 									</div>
 									<div class="form-holder">
@@ -105,6 +139,12 @@
 											<input type="text" class="form-control" id="telefono" name="telefono"
 												required>
 											<span class="label">Ciudad</span>
+											<datalist>
+												<option value="Bogota"></option>
+												<option value=""></option>
+												<option value=""></option>
+												<option value=""></option>
+											</datalist>
 										</label>
 									</div>
 									<div class="form-holder">
@@ -114,6 +154,9 @@
 											<span class="label">Direccion</span>
 										</label>
 									</div>
+
+								</div>
+								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" name="your_email_1" id="your_email_1"
