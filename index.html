@@ -8,8 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Font-->
 	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
-	<link rel="stylesheet" type="text/css"
-		href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 	<!-- datepicker -->
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 	<!-- Main Style Css -->
@@ -38,9 +37,9 @@
 									
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
-										<label for="room" class="special-label-1">Tipo de documento</label>
-										<select name="room" id="room" class="form-control">
-											<option value="1" selected>Cédula Ciudadanía</option>
+										<label for="tpdocumento" class="special-label-1">Tipo de documento</label>
+										<select name="tpdocumento" id="tpdocumento" class="form-control">
+											<option value="1">Cédula Ciudadanía</option>
 											<option value="2">NIT</option>
 											<option value="3">NN</option>
 											<option value="4">Pasaporte </option>
@@ -161,39 +160,54 @@
 										</label>
 									</div>
 
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="pais" name="pais" required>
-											<span class="label">País</span>
-										</label>
+									<div class="form-holder form-holder-2">
+										<label for="pais" class="special-label-1">País</label>
+										<select name="pais" id="pais" class="form-control">
+											<option value="1" selected>Colombia</option>
+										</select>
+										<span class="select-btn">
+											<i class="zmdi zmdi-chevron-down"></i>
+										</span>
 									</div>
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="servicio" name="servicio" required>
-											<span class="label">Servicio</span>
-										</label>
+									<div class="form-holder form-holder-2">
+										<label for="servicio" class="special-label-1">Servicio</label>
+										<select name="servicio" id="servicio" class="form-control">
+											<option value="1" selected>Particular</option>
+										</select>
+										<span class="select-btn">
+											<i class="zmdi zmdi-chevron-down"></i>
+										</span>
 									</div>
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="clase" name="clase" required>
-											<span class="label">Clase</span>
-										</label>
+									<div class="form-holder form-holder-2">
+										<label for="servicio" class="special-label-1">Clase</label>
+										<select name="servicio" id="servicio" class="form-control">
+											<option value="1" selected>Automovil</option>
+										</select>
+										<span class="select-btn">
+											<i class="zmdi zmdi-chevron-down"></i>
+										</span>
 									</div>
 								</div>
 								<div class="form-row">
 									
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="marca" name="marca" required>
-											<span class="label">Marca</span>
-										</label>
+									<div class="form-holder form-holder-2">
+										<label for="marca" class="special-label-1">Marca</label>
+										<select name="marca" id="marca" class="form-control">
+											<option value="1" selected>Yamaha</option>
+										</select>
+										<span class="select-btn">
+											<i class="zmdi zmdi-chevron-down"></i>
+										</span>
 									</div>
 
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="linea" name="linea" required>
-											<span class="label">Linea</span>
-										</label>
+									<div class="form-holder form-holder-2">
+										<label for="servicio" class="special-label-1">Linea</label>
+										<select name="servicio" id="servicio" class="form-control">
+											<option value="1" selected>SZ16R</option>
+										</select>
+										<span class="select-btn">
+											<i class="zmdi zmdi-chevron-down"></i>
+										</span>
 									</div>
 
 									<div class="form-holder">
@@ -248,20 +262,20 @@
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo 2</h3>
-									<span>3s/4</span>
+									<span>3/4</span>
 								</div>
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="placa" name="placa" required>
-											<span class="label">Placa</span>
+											<input type="text" class="form-control" id="nomotor" name="nomotor" required>
+											<span class="label">N° Motor</span>
 										</label>
 									</div>
 
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="pais" name="pais" required>
-											<span class="label">País</span>
+											<span class="label"></span>
 										</label>
 									</div>
 									<div class="form-holder">
@@ -345,7 +359,7 @@
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo 3</h3>
-									<span>3s/4</span>
+									<span>4/4</span>
 								</div>
 								<div class="form-row">
 									<div class="form-holder">
@@ -361,18 +375,21 @@
 											<span class="label">País</span>
 										</label>
 									</div>
+								
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="servicio" name="servicio" required>
 											<span class="label">Servicio</span>
 										</label>
 									</div>
+
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="clase" name="clase" required>
 											<span class="label">Clase</span>
 										</label>
 									</div>
+								
 								</div>
 								<div class="form-row">
 									
