@@ -8,7 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Font-->
 	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
-	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css"
+		href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 	<!-- datepicker -->
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 	<!-- Main Style Css -->
@@ -29,68 +30,87 @@
 						</h2>
 						<section>
 							<div class="inner">
+								<!-- persona linea 1 -->
 								<div class="form-heading">
 									<h3>PROPIETARIO, TENEDOR O POSEEDOR DEL VEHÍCULO</h3>
 									<span>1/4</span>
 								</div>
 								<div class="form-row">
-									
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<label for="tpdocumento" class="special-label-1">Tipo de documento</label>
-										<select name="tpdocumento" id="tpdocumento" class="form-control">
-											<option value="1">Cédula Ciudadanía</option>
-											<option value="2">NIT</option>
-											<option value="3">NN</option>
-											<option value="4">Pasaporte </option>
-											<option value="5">Cédula de Extranjería</option>
-											<option value="6">Tarjeta de Identidad </option>
-											<option value="7">Registro Civil</option>
-											<option value="8">Carnet Diplomático </option>
-											<option value="9">TI2</option>
-											<option value="10">Permiso por Protección Temporal</option>
-										</select>
-										<span class="select-btn">
-											<i class="zmdi zmdi-chevron-down"></i>
-										</span>
+									<div class="form-row">
+										<div class="form-holder form-holder-2">
+											<label for="tpdocumento" class="special-label-1">Tipo de documento</label>
+											<select name="tpdocumento" id="tpdocumento" class="form-control">
+												<option value="1">Cédula Ciudadanía</option>
+												<option value="2">NIT</option>
+												<option value="3">NN</option>
+												<option value="4">Pasaporte </option>
+												<option value="5">Cédula de Extranjería</option>
+												<option value="6">Tarjeta de Identidad </option>
+												<option value="7">Registro Civil</option>
+												<option value="8">Carnet Diplomático </option>
+												<option value="9">TI2</option>
+												<option value="10">Permiso por Protección Temporal</option>
+											</select>
+											<span class="select-btn">
+												<i class="zmdi zmdi-chevron-down"></i>
+											</span>
+										</div>
 									</div>
-								</div>
-								<div class="form-holder">
-									<label class="form-row-inner">
+									<div class="form-holder">
+										<label class="form-row-inner">
 											<input type="text" class="form-control" id="documento" name="documento"
 												required>
 											<span class="label">N° Documento</span>
 										</label>
-								</div>
-								<div class="form-holder">
+									</div>
+									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="nombre" name="nombre" required>
 											<span class="label">Nombre o Razon social</span>
 										</label>
 									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" list="listaPais" id="paispersona" name="paispersona"
+												required>
+											<span class="label">País</span>
+											<datalist id="listaPais">
+												<option value="San Francisco">
+												<option value="New York">
+												<option value="Seattle">
+												<option value="Los Angeles">
+												<option value="Chicago">
+											</datalist>
+										</label>
+									</div>
 								</div>
+								<!-- persona linea 2 -->
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="telefono" name="telefono" required>
+											<input type="text" class="form-control" id="telefono" name="telefono"
+												required>
 											<span class="label">Telefono</span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="telefono" name="telefono" required>
+											<input type="text" class="form-control" id="telefono" name="telefono"
+												required>
 											<span class="label">Departamento</span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="telefono" name="telefono" required>
+											<input type="text" class="form-control" id="telefono" name="telefono"
+												required>
 											<span class="label">Ciudad</span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="direccion" name="direccion" required>
+											<input type="text" class="form-control" id="direccion" name="direccion"
+												required>
 											<span class="label">Direccion</span>
 										</label>
 									</div>
@@ -146,7 +166,7 @@
 							<span class="step-text">Vehículo</span>
 						</h2>
 						<section>
-							
+
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo</h3>
@@ -189,7 +209,7 @@
 									</div>
 								</div>
 								<div class="form-row">
-									
+
 									<div class="form-holder form-holder-2">
 										<label for="marca" class="special-label-1">Marca</label>
 										<select name="marca" id="marca" class="form-control">
@@ -216,20 +236,22 @@
 											<span class="label">Modelo</span>
 										</label>
 									</div>
-									
+
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="nolicencia" name="nolicencia" required>
+											<input type="text" class="form-control" id="nolicencia" name="nolicencia"
+												required>
 											<span class="label">N° licencia</span>
 										</label>
 									</div>
-								
+
 
 								</div>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label for="day" class="special-label-1">Fecha de matricula</label>
-										<input type="date" name="fechamatricula" class="" id="fechamatricula" placeholder="15 / 08 / 2018">
+										<input type="date" name="fechamatricula" class="" id="fechamatricula"
+											placeholder="15 / 08 / 2018">
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
@@ -239,7 +261,8 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="combustible" name="combustible" required>
+											<input type="text" class="form-control" id="combustible" name="combustible"
+												required>
 											<span class="label">Combustible</span>
 										</label>
 									</div>
@@ -258,7 +281,7 @@
 							<span class="step-text">Vehículo 2</span>
 						</h2>
 						<section>
-							
+
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo 2</h3>
@@ -267,7 +290,8 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="nomotor" name="nomotor" required>
+											<input type="text" class="form-control" id="nomotor" name="nomotor"
+												required>
 											<span class="label">N° Motor</span>
 										</label>
 									</div>
@@ -280,7 +304,8 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="servicio" name="servicio" required>
+											<input type="text" class="form-control" id="servicio" name="servicio"
+												required>
 											<span class="label">Servicio</span>
 										</label>
 									</div>
@@ -292,7 +317,7 @@
 									</div>
 								</div>
 								<div class="form-row">
-									
+
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="marca" name="marca" required>
@@ -313,20 +338,22 @@
 											<span class="label">Modelo</span>
 										</label>
 									</div>
-									
+
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="nolicencia" name="nolicencia" required>
+											<input type="text" class="form-control" id="nolicencia" name="nolicencia"
+												required>
 											<span class="label">N° licencia</span>
 										</label>
 									</div>
-								
+
 
 								</div>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label for="day" class="special-label-1">Fecha de matricula</label>
-										<input type="date" name="fechamatricula" class="" id="fechamatricula" placeholder="15 / 08 / 2018">
+										<input type="date" name="fechamatricula" class="" id="fechamatricula"
+											placeholder="15 / 08 / 2018">
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
@@ -336,7 +363,8 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="combustible" name="combustible" required>
+											<input type="text" class="form-control" id="combustible" name="combustible"
+												required>
 											<span class="label">Combustible</span>
 										</label>
 									</div>
@@ -350,12 +378,12 @@
 							</div>
 						</section>
 						<!-- SECTION 4-->
-						 <h2>
+						<h2>
 							<p class="step-icon"><span>4</span></p>
 							<span class="step-text">Vehículo 3</span>
 						</h2>
 						<section>
-							
+
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo 3</h3>
@@ -375,10 +403,11 @@
 											<span class="label">País</span>
 										</label>
 									</div>
-								
+
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="servicio" name="servicio" required>
+											<input type="text" class="form-control" id="servicio" name="servicio"
+												required>
 											<span class="label">Servicio</span>
 										</label>
 									</div>
@@ -389,10 +418,10 @@
 											<span class="label">Clase</span>
 										</label>
 									</div>
-								
+
 								</div>
 								<div class="form-row">
-									
+
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="marca" name="marca" required>
@@ -413,20 +442,22 @@
 											<span class="label">Modelo</span>
 										</label>
 									</div>
-									
+
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="nolicencia" name="nolicencia" required>
+											<input type="text" class="form-control" id="nolicencia" name="nolicencia"
+												required>
 											<span class="label">N° licencia</span>
 										</label>
 									</div>
-								
+
 
 								</div>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label for="day" class="special-label-1">Fecha de matricula</label>
-										<input type="date" name="fechamatricula" class="" id="fechamatricula" placeholder="15 / 08 / 2018">
+										<input type="date" name="fechamatricula" class="" id="fechamatricula"
+											placeholder="15 / 08 / 2018">
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
@@ -436,7 +467,8 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="combustible" name="combustible" required>
+											<input type="text" class="form-control" id="combustible" name="combustible"
+												required>
 											<span class="label">Combustible</span>
 										</label>
 									</div>
