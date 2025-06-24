@@ -456,6 +456,49 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 	.inner .form-row.form-row-date .form-holder select#year {
 		width: 25%;
 	}
+    /* Oculta el checkbox nativo */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Contenedor visual del checkbox */
+.custom-checkbox .checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Cambiar el color o estilo al pasar el mouse */
+.custom-checkbox:hover .checkmark {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Check visible cuando está seleccionado */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Texto al lado del checkbox */
+.custom-checkbox {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
 }
 
 @media screen and (max-width: 575px) {
@@ -502,6 +545,50 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 	.inner .form-row .form-holder .select-btn {
 		right: 2%;
 	}
+
+    /* Oculta el checkbox nativo */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Contenedor visual del checkbox */
+.custom-checkbox .checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Cambiar el color o estilo al pasar el mouse */
+.custom-checkbox:hover .checkmark {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Check visible cuando está seleccionado */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Texto al lado del checkbox */
+.custom-checkbox {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
 	
 
 } 
