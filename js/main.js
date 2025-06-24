@@ -8,9 +8,9 @@ $(function(){
         transitionEffectSpeed: 500,
         titleTemplate : '<div class="title">#title#</div>',
         labels: {
-            previous : 'Back',
-            next : 'Next',
-            finish : 'Confirm',
+            previous : 'ANTERIOR',
+            next : 'SIGUIENTE',
+            finish : 'ENVIAR',
             current : ''
         },
         onStepChanging: function (event, currentIndex, newIndex) { 
@@ -23,8 +23,15 @@ $(function(){
             // $('#room-val').text(room);
             // $('#day-val').text(day);
             // $('#time-val').text(time);
-
+            
             return true;
+        },
+        onFinished: function (event, currentIndex) {
+            // Aquí detectas el final
+            alert('¡Formulario finalizado!');
+            
+            // Si quieres enviar el formulario automáticamente:
+            // $("#form-total").submit();
         }
     });
     $("#day").datepicker({

@@ -95,8 +95,8 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" list="departamentos" class="form-control" id="telefono" name="telefono"
-												required>
+											<input type="text" list="departamentos" class="form-control" id="telefono"
+												name="telefono" required>
 											<span class="label">Departamento</span>
 											<datalist id="departamentos">
 												<option value="Amazonas">
@@ -136,14 +136,14 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="telefono" name="telefono"
-												required>
+											<input type="text" list="ciudades" class="form-control" id="telefono"
+												name="telefono" required>
 											<span class="label">Ciudad</span>
-											<datalist>
+											<datalist id="ciudades">
 												<option value="Bogota"></option>
-												<option value=""></option>
-												<option value=""></option>
-												<option value=""></option>
+												<option value="Cali"></option>
+												<option value="Medellin"></option>
+												<option value="Ibague"></option>
 											</datalist>
 										</label>
 									</div>
@@ -215,6 +215,7 @@
 									<h3>Datos Del vehículo</h3>
 									<span>2/4</span>
 								</div>
+
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
@@ -222,55 +223,58 @@
 											<span class="label">Placa</span>
 										</label>
 									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="vin" name="vin" required>
+											<span class="label">VIN</span>
+										</label>
+									</div>
+								</div>
 
-									<div class="form-holder form-holder-2">
-										<label for="pais" class="special-label-1">País</label>
-										<select name="pais" id="pais" class="form-control">
-											<option value="1" selected>Colombia</option>
-										</select>
-										<span class="select-btn">
-											<i class="zmdi zmdi-chevron-down"></i>
-										</span>
+
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" list="listaPais" id="paisvehicl"
+												name="paisvehicl" required>
+											<span class="label">País</span>
+										</label>
 									</div>
-									<div class="form-holder form-holder-2">
-										<label for="servicio" class="special-label-1">Servicio</label>
-										<select name="servicio" id="servicio" class="form-control">
-											<option value="1" selected>Particular</option>
-										</select>
-										<span class="select-btn">
-											<i class="zmdi zmdi-chevron-down"></i>
-										</span>
+
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" list="listaservicio" id="paisvehicl"
+												name="paisvehicl" required>
+											<span class="label">Servicio</span>
+											<datalist id="listaservicio">
+												<option value="PARTICULAR">PARTICULAR</option>
+											</datalist>
+										</label>
 									</div>
-									<div class="form-holder form-holder-2">
-										<label for="servicio" class="special-label-1">Clase</label>
-										<select name="servicio" id="servicio" class="form-control">
-											<option value="1" selected>Automovil</option>
-										</select>
-										<span class="select-btn">
-											<i class="zmdi zmdi-chevron-down"></i>
-										</span>
+
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" list="listamarca" id="marca"
+												name="marca" required>
+											<span class="label">Marca</span>
+											<datalist id="listamarca">
+												<option value="YAMAHA"></option>
+											</datalist>
+										</label>
 									</div>
+
 								</div>
 								<div class="form-row">
 
-									<div class="form-holder form-holder-2">
-										<label for="marca" class="special-label-1">Marca</label>
-										<select name="marca" id="marca" class="form-control">
-											<option value="1" selected>Yamaha</option>
-										</select>
-										<span class="select-btn">
-											<i class="zmdi zmdi-chevron-down"></i>
-										</span>
-									</div>
-
-									<div class="form-holder form-holder-2">
-										<label for="servicio" class="special-label-1">Linea</label>
-										<select name="servicio" id="servicio" class="form-control">
-											<option value="1" selected>SZ16R</option>
-										</select>
-										<span class="select-btn">
-											<i class="zmdi zmdi-chevron-down"></i>
-										</span>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" list="listalinea" id="linea"
+												name="linea" required>
+											<span class="label">Linea</span>
+											<datalist id="listalinea">
+												<option value="SZ16R"></option>
+											</datalist>
+										</label>
 									</div>
 
 									<div class="form-holder">
@@ -287,34 +291,36 @@
 											<span class="label">N° licencia</span>
 										</label>
 									</div>
-
-
 								</div>
 								<div class="form-row">
-									<div class="form-holder form-holder-2">
+									<div class="form-holder">
 										<label for="day" class="special-label-1">Fecha de matricula</label>
 										<input type="date" name="fechamatricula" class="" id="fechamatricula"
 											placeholder="15 / 08 / 2018">
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="color" name="color" required>
+											<input type="text" class="form-control" list="listacolores" id="color"
+												name="color" required>
 											<span class="label">Color</span>
+											<datalist id="listacolores">
+												<option value="NEGRO GRIS"></option>
+											</datalist>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="combustible" name="combustible"
-												required>
+											<input type="text" class="form-control" list="listacombustible"
+												id="combustible" name="combustible" required>
 											<span class="label">Combustible</span>
+											<datalist id="listacombustible">
+												<option value="GASOLINA"></option>
+												<option value="DIESEL"></option>
+												<option value="GAS-GASOLINA"></option>
+											</datalist>
 										</label>
 									</div>
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="vin" name="vin" required>
-											<span class="label">VIN</span>
-										</label>
-									</div>
+
 								</div>
 							</div>
 						</section>
@@ -341,39 +347,56 @@
 
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="pais" name="pais" required>
-											<span class="label"></span>
+											<input type="text" class="form-control" list="listatpmotor" id="combustible"
+												name="combustible" required>
+											<span class="label">Tipo de Motor</span>
+											<datalist id="listatpmotor">
+												<option value="otto"></option>
+												<option value="diesel"></option>
+											</datalist>
 										</label>
 									</div>
+
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="servicio" name="servicio"
+											<input type="number" class="form-control" id="cilindraje" name="cilindraje"
 												required>
-											<span class="label">Servicio</span>
+											<span class="label">Cilindraje</span>
 										</label>
 									</div>
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="clase" name="clase" required>
-											<span class="label">Clase</span>
-										</label>
-									</div>
+
+
 								</div>
 								<div class="form-row">
 
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="marca" name="marca" required>
-											<span class="label">Marca</span>
+											<input type="number" class="form-control" id="kms" name="kms" required>
+											<span class="label">Kilometraje</span>
 										</label>
 									</div>
 
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="linea" name="linea" required>
-											<span class="label">Linea</span>
+											<input type="number" class="form-control" id="nopasajeros"
+												name="nopasajeros" required>
+											<span class="label">N° pasajeros</span>
 										</label>
 									</div>
+
+									<div class="form-holder">
+										<label class="custom-checkbox">
+											<input type="checkbox">
+											<span class="checkmark"></span>
+											Blindado
+										</label>
+									</div>
+
+									
+
+
+								</div>
+								<div class="form-row">
 
 									<div class="form-holder">
 										<label class="form-row-inner">
@@ -391,8 +414,6 @@
 									</div>
 
 
-								</div>
-								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label for="day" class="special-label-1">Fecha de matricula</label>
 										<input type="date" name="fechamatricula" class="" id="fechamatricula"
@@ -530,6 +551,7 @@
 			</div>
 		</div>
 	</div>
+
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.steps.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
