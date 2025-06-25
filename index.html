@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 	<!-- Main Style Css -->
 	<link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
@@ -35,8 +36,14 @@
 									<h3>PROPIETARIO, TENEDOR O POSEEDOR DEL VEHÍCULO</h3>
 									<span>1/4</span>
 								</div>
+
+								<div class="form-holder">
+
+
+								</div>
 								<div class="form-row">
 									<!-- <div class="form-row"> -->
+
 									<div class="form-holder">
 										<label for="tpdocumento" class="special-label-1">Tipo de documento</label>
 										<select name="tpdocumento" id="tpdocumento" class="form-control">
@@ -80,6 +87,7 @@
 											<span class="label">Telefono</span>
 										</label>
 									</div>
+
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" list="listaPais" id="paispersona"
@@ -94,6 +102,7 @@
 											</datalist>
 										</label>
 									</div>
+
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" list="departamentos" class="form-control" id="telefono"
@@ -136,8 +145,8 @@
 										</label>
 									</div>
 
-
 								</div>
+
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
@@ -152,6 +161,7 @@
 											</datalist>
 										</label>
 									</div>
+
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="direccion" name="direccion"
@@ -235,8 +245,8 @@
 									</div>
 								</div>
 
-
 								<div class="form-row">
+
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" list="listaPais" id="paisvehicl"
@@ -268,6 +278,7 @@
 									</div>
 
 								</div>
+
 								<div class="form-row">
 
 									<div class="form-holder">
@@ -283,7 +294,8 @@
 
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="number" class="form-control" id="modelo" name="modelo" required>
+											<input type="number" class="form-control" id="modelo" name="modelo"
+												required>
 											<span class="label">Modelo</span>
 										</label>
 									</div>
@@ -296,6 +308,7 @@
 										</label>
 									</div>
 								</div>
+
 								<div class="form-row">
 									<div class="form-holder">
 										<label for="day" class="special-label-1">Fecha de matricula</label>
@@ -395,6 +408,15 @@
 											Blindado
 										</label>
 									</div>
+									<div class="form-holder">
+										<label class="custom-checkbox">
+											<input type="checkbox">
+											<span class="checkmark"></span>
+											ENSEÑANZA
+										</label>
+									</div>
+
+
 
 
 
@@ -404,8 +426,9 @@
 
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="number" class="form-control" id="modelo" name="modelo" required>
-											<span class="label">Modelo</span>
+											<input type="number" class="form-control" id="modelo" name="modelo"
+												required>
+											<span class="label">Potencia</span>
 										</label>
 									</div>
 
@@ -413,13 +436,13 @@
 										<label class="form-row-inner">
 											<input type="number" class="form-control" id="nolicencia" name="nolicencia"
 												required>
-											<span class="label">N° licencia</span>
+											<span class="label">Carrocería</span>
 										</label>
 									</div>
 
 
 									<div class="form-holder form-holder-2">
-										<label for="day" class="special-label-1">Fecha de matricula</label>
+										<label for="day" class="special-label-1">Vencimiento SOAT</label>
 										<input type="date" name="fechamatricula" class="" id="fechamatricula"
 											placeholder="15 / 08 / 2018">
 									</div>
@@ -428,24 +451,32 @@
 
 								<div class="form-row">
 									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="color" name="color" required>
-											<span class="label">Color</span>
-										</label>
+										<label for="tpdocumento" class="special-label-1">CONVERSION GNV</label>
+										<select name="tpdocumento" id="tpdocumento" class="form-control">
+											<option value="true">SI</option>
+											<option value="false">NO</option>
+											<option value="" selected>N/A</option>
+										</select>
+										<span class="select-btn">
+											<i class="zmdi zmdi-chevron-down"></i>
+										</span>
+									</div>
+									<div class="form-holder form-holder-2">
+										<label for="fechagnv" class="special-label-1">Vencimiento GNV</label>
+										<input type="date" name="fechagnv" class="" id="fechagnv"
+											placeholder="15 / 08 / 2018">
 									</div>
 									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="combustible" name="combustible"
-												required>
-											<span class="label">Combustible</span>
-										</label>
+										<label for="vez" class="special-label-1">VEZ</label>
+										<select name="vez" id="vez" class="form-control">
+											<option value="1">1 RA</option>
+											<option value="2">2 DA</option>
+										</select>
+										<span class="select-btn">
+											<i class="zmdi zmdi-chevron-down"></i>
+										</span>
 									</div>
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="vin" name="vin" required>
-											<span class="label">VIN</span>
-										</label>
-									</div>
+
 								</div>
 							</div>
 						</section>
@@ -468,89 +499,8 @@
 											<span class="label">Placa</span>
 										</label>
 									</div>
-
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="pais" name="pais" required>
-											<span class="label">País</span>
-										</label>
-									</div>
-
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="servicio" name="servicio"
-												required>
-											<span class="label">Servicio</span>
-										</label>
-									</div>
-
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="clase" name="clase" required>
-											<span class="label">Clase</span>
-										</label>
-									</div>
-
 								</div>
-								<div class="form-row">
-
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="marca" name="marca" required>
-											<span class="label">Marca</span>
-										</label>
-									</div>
-
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="linea" name="linea" required>
-											<span class="label">Linea</span>
-										</label>
-									</div>
-
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="modelo" name="modelo" required>
-											<span class="label">Modelo</span>
-										</label>
-									</div>
-
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="nolicencia" name="nolicencia"
-												required>
-											<span class="label">N° licencia</span>
-										</label>
-									</div>
-
-
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<label for="day" class="special-label-1">Fecha de matricula</label>
-										<input type="date" name="fechamatricula" class="" id="fechamatricula"
-											placeholder="15 / 08 / 2018">
-									</div>
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="color" name="color" required>
-											<span class="label">Color</span>
-										</label>
-									</div>
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="combustible" name="combustible"
-												required>
-											<span class="label">Combustible</span>
-										</label>
-									</div>
-									<div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="vin" name="vin" required>
-											<span class="label">VIN</span>
-										</label>
-									</div>
-								</div>
+								
 							</div>
 						</section>
 
