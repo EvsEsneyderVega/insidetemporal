@@ -14,7 +14,17 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 	<!-- Main Style Css -->
 	<link rel="stylesheet" href="css/style.css" />
-	
+	<style>
+		#signature-pad {
+			border: 1px solid #000;
+			width: 400px;
+			height: 200px;
+		}
+
+		#buttons {
+			margin-top: 10px;
+		}
+	</style>
 
 </head>
 
@@ -35,7 +45,7 @@
 								<!-- persona linea 1 -->
 								<div class="form-heading">
 									<h3>PROPIETARIO, TENEDOR O POSEEDOR DEL VEHÍCULO</h3>
-									<span>1/4</span>
+									<span>1/5</span>
 								</div>
 
 								<div class="form-holder">
@@ -228,7 +238,7 @@
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo</h3>
-									<span>2/4</span>
+									<span>2/5</span>
 								</div>
 
 								<div class="form-row">
@@ -352,7 +362,7 @@
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo 2</h3>
-									<span>3/4</span>
+									<span>3/5</span>
 								</div>
 								<div class="form-row">
 									<div class="form-holder">
@@ -491,14 +501,36 @@
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo 3</h3>
-									<span>4/4</span>
+									<span>4/5</span>
 								</div>
-								<div class="form-row" >
+								<div class="form-row">
 									<div class="form-holder" id="criterio">
-										
+
 									</div>
 								</div>
-								
+
+							</div>
+						</section>
+						<!-- SECTION 5 -->
+						<h2>
+							<p class="step-icon"><span>5</span></p>
+							<span class="step-text">Vehículo 3</span>
+						</h2>
+						<section>
+
+							<div class="inner">
+								<div class="form-heading">
+									<h3>Datos Del vehículo 3</h3>
+									<span>5/5</span>
+								</div>
+								<div class="form-row">
+									<canvas id="signature-pad"></canvas>
+									<div id="buttons">
+										<button id="clear">Limpiar</button>
+										<button id="save">Guardar Imagen</button>
+									</div>
+								</div>
+
 							</div>
 						</section>
 
@@ -511,8 +543,14 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.steps.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
+
+	<script src="js/signature_pad.umd.min.js"></script>
+
 	<script src="js/main.js"></script>
 	<script src="js/funciones.js"></script>
+
+	
+
 </body>
 
 </html>
