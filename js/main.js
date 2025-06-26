@@ -17,7 +17,7 @@ $(function () {
             setTimeout(() => {
                 console.log("Han pasado 2 segundos");
                 if($('#signature-pad').is(':visible')){
-                    console.log('inicializado el signpad');
+                    // console.log('inicializado el signpad');
                     inicializarSignPad();
                 }
             

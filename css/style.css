@@ -1,5 +1,9 @@
 body {
 	margin:  0;
+    background: #383a4f;
+}
+.frm-btn{
+    background-color: #55e8d5;
 }
 .page-content {
 	width: 100%;
@@ -23,6 +27,7 @@ body {
 	-moz-flex-direction: column;
 	-webkit-flex-direction: column;
 }
+
 .wizard-heading {
     color: #fff;
     font-family: 'Open Sans', sans-serif;

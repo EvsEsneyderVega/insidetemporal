@@ -26,20 +26,33 @@
 		}
 	</style>
 
-</head>
+</head> 
 
 <body>
 	<div class="page-content">
-		<div class="wizard-heading">Wizard ingreso</div>
+		<!-- <div class="wizard-heading">Wizard ingreso</div> -->
 		<div class="wizard-v6-content">
 			<div class="wizard-form">
 				<form class="form-register" id="form-register" action="#" method="post">
 					<div id="form-total">
+						<!-- SECTION 0 -->
+						<h2>
+							<p class="step-icon"><span>0</span></p>
+							<!-- <span class="step-text"></span> -->
+						</h2>
+						<section>
+							<p id="contrato">
+
+							</p>
+						</section>
+
+
 						<!-- SECTION 1 -->
 						<h2>
 							<p class="step-icon"><span>1</span></p>
-							<span class="step-text">Datos Usuario</span>
+							<span class="step-text"></span>
 						</h2>
+
 						<section>
 							<div class="inner">
 								<!-- persona linea 1 -->
@@ -228,11 +241,13 @@
 								</div>  -->
 							</div>
 						</section>
+
 						<!-- SECTION 2 -->
 						<h2>
 							<p class="step-icon"><span>2</span></p>
-							<span class="step-text">Vehículo</span>
+							<span class="step-text"></span>
 						</h2>
+
 						<section>
 
 							<div class="inner">
@@ -352,10 +367,11 @@
 								</div>
 							</div>
 						</section>
+
 						<!-- SECTION 3 -->
 						<h2>
 							<p class="step-icon"><span>3</span></p>
-							<span class="step-text">Vehículo 2</span>
+							<span class="step-text"></span>
 						</h2>
 						<section>
 
@@ -419,6 +435,7 @@
 											Blindado
 										</label>
 									</div>
+
 									<div class="form-holder">
 										<label class="custom-checkbox">
 											<input type="checkbox">
@@ -426,13 +443,8 @@
 											ENSEÑANZA
 										</label>
 									</div>
-
-
-
-
-
-
 								</div>
+
 								<div class="form-row">
 
 									<div class="form-holder">
@@ -472,11 +484,13 @@
 											<i class="zmdi zmdi-chevron-down"></i>
 										</span>
 									</div>
+
 									<div class="form-holder form-holder-2">
 										<label for="fechagnv" class="special-label-1">Vencimiento GNV</label>
 										<input type="date" name="fechagnv" class="" id="fechagnv"
 											placeholder="15 / 08 / 2018">
 									</div>
+
 									<div class="form-holder">
 										<label for="vez" class="special-label-1">VEZ</label>
 										<select name="vez" id="vez" class="form-control">
@@ -491,13 +505,14 @@
 								</div>
 							</div>
 						</section>
+
 						<!-- SECTION 4-->
 						<h2>
 							<p class="step-icon"><span>4</span></p>
-							<span class="step-text">Vehículo 3</span>
+							<span class="step-text"></span>
 						</h2>
-						<section>
 
+						<section>
 							<div class="inner">
 								<div class="form-heading">
 									<h3>Datos Del vehículo 3</h3>
@@ -505,33 +520,41 @@
 								</div>
 								<div class="form-row">
 									<div class="form-holder" id="criterio">
+										
 
 									</div>
 								</div>
-
 							</div>
 						</section>
+
 						<!-- SECTION 5 -->
 						<h2>
 							<p class="step-icon"><span>5</span></p>
-							<span class="step-text">Vehículo 3</span>
+							<span class="step-text"></span>
 						</h2>
+
 						<section>
 
 							<div class="inner">
 								<div class="form-heading">
-									<h3>Datos Del vehículo 3</h3>
+									<h3>Firma de aceptación</h3>
 									<span>5/5</span>
 								</div>
+
 								<div class="form-row">
-									<canvas id="signature-pad"></canvas>
-									<div id="buttons">
-										<button id="clear">Limpiar</button>
-										<button id="save">Guardar Imagen</button>
+									<div id="buttons" class="form-holder">
+										<button class="ui-button ui-widget ui-corner-all frm-btn" id="clear" style="background-color: #43ccba; color: #fff; border: none;">Limpiar</button>
+									</div>
+								</div>
+								
+								<div class="form-row">
+									<div class="form-holder">
+										<canvas id="signature-pad"></canvas>
 									</div>
 								</div>
 
 							</div>
+
 						</section>
 
 					</div>
