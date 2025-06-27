@@ -660,9 +660,9 @@
 
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input autocomplete="off"  type="text" class="form-control" id="carroceria" name="carroceria"
+											<input autocomplete="off"  type="text" class="form-control" list="carrocerialst" id="carroceria" name="carroceria"
 												required>
-												<datalist>
+												<datalist id="carrocerialst">
 													<option value="SEDAN"></option>
 													<option value="SPORT"></option>
 													<option value="ESTACAS"></option>
@@ -820,12 +820,13 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/jspdf.js"></script>
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.steps.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/signature_pad.umd.min.js"></script>
-	<script src="js/jspdf.js"></script>
+	
 	<script src="js/main.js"></script>
 	<script src="js/funciones.js"></script>
 </body>
