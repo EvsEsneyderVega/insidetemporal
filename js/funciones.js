@@ -62,5 +62,11 @@ function uiCondiciones(){
         contenedor.innerHTML += i+1 + ") " + contrato[i]+"<br><br>";
     }
 }
+
+
 uiConceptos();
 uiCondiciones();
+
+
+
+

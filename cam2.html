@@ -1,96 +1,52 @@
-$(function () {
-    $("#form-total").steps({
-        headerTag: "h2",
-        bodyTag: "section",
-        transitionEffect: "fade",
-        // enableAllSteps: true,
-        autoFocus: true,
-        transitionEffectSpeed: 500,
-        titleTemplate: '<div class="title">#title#</div>',
-        labels: {
-            previous: 'ANTERIOR',
-            next: 'SIGUIENTE',
-            finish: 'ENVIAR',
-            current: ''
-        },
-        onStepChanging: function (event, currentIndex, newIndex) {
-            setTimeout(() => {
-                //console.log("Han pasado 2 segundos");
-                if($('#signature-pad').is(':visible')){
-                    // console.log('inicializado el signpad');
-                    inicializarSignPad();
-                }
-                if($('#video').is(':visible')){
-                    initCam();
-                }
-            
-            }, 2000);
-            
-            return true;
-        },
-        onFinished: function (event, currentIndex) {
-            // Aquí detectas el final
-            alert('¡Formulario finalizado!');
-
-            // Si quieres enviar el formulario automáticamente:
-            // $("#form-total").submit();
-        }
-    });
-    $("#day").datepicker({
-        dateFormat: "MM - DD - yy",
-        showOn: "both",
-        buttonText: '<i class="zmdi zmdi-chevron-down"></i>',
-    });
-});
-
-function inicializarSignPad() {
-    const canvas = document.getElementById('signature-pad');
-    signaturePad = new SignaturePad(canvas);
-
-    console.log("SignaturePad inicializado");
-
-    // Ajustar tamaño del canvas
-    function resizeCanvas() {
-        const ratio = Math.max(window.devicePixelRatio || 1, 1);
-        canvas.width = canvas.offsetWidth * ratio;
-        canvas.height = canvas.offsetHeight * ratio;
-        canvas.getContext("2d").scale(ratio, ratio);
-        signaturePad.clear();
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Captura Técnica Fotográfica</title>
+<style>
+    video, img {
+        max-width: 400px;
+        border: 2px solid #000;
+        margin: 10px;
     }
+</style>
+</head>
+<body>
 
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
+<h2>Registro Fotográfico Técnico-Mecánico</h2>
 
-    // Botón limpiar
-    document.getElementById('clear').addEventListener('click', () => {
-        signaturePad.clear();
-    });
+<label>Placa:</label>
+<input type="text" id="placaInput" placeholder="Ej: ABC123" value="ABC123">
+<br><br>
 
-    // Botón guardar
-    document.getElementById('save').addEventListener('click', () => {
-        if (signaturePad.isEmpty()) {
-            alert("Por favor, firma antes de guardar.");
-        } else {
-            const dataURL = signaturePad.toDataURL();
-            console.log("Imagen Base64:", dataURL);
-            window.open(dataURL);
-        }
-    });
-}
+<select id="selectorCamara">
+    <option value="user">Cámara Frontal</option>
+    <option value="environment" selected>Cámara Trasera</option>
+</select>
+<button id="iniciar">Iniciar Cámara</button>
+<br><br>
 
-function initCam(){
-    const video = document.getElementById('video');
+<video id="video" autoplay playsinline></video>
+<br>
+<button id="capturar">📷 Capturar Imagen Técnica</button>
+<br>
+<canvas id="canvas" style="display:none;"></canvas>
+<br>
+<h3>Resultado:</h3>
+<img id="fotoFinal" alt="Imagen técnica capturada">
+
+<script>
+const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const fotoFinal = document.getElementById('fotoFinal');
-
-const selectorCamara = document.getElementById('optselectorCamara');
-const btnIniciar = document.getElementById('btniniciar');
-const btnCapturar = document.getElementById('btncapturar');
+const placaInput = document.getElementById('placaInput');
+const selectorCamara = document.getElementById('selectorCamara');
+const btnIniciar = document.getElementById('iniciar');
+const btnCapturar = document.getElementById('capturar');
 
 let streamActual = null;
 
 btnIniciar.addEventListener('click', () => {
-    alert("algo");
     if (streamActual) {
         streamActual.getTracks().forEach(track => track.stop());
     }
@@ -107,9 +63,6 @@ btnIniciar.addEventListener('click', () => {
 });
 
 btnCapturar.addEventListener('click', () => {
-
-    const placaInput = document.getElementById('placa');
-
     canvas.width = 945;
     canvas.height = 825;
     const ctx = canvas.getContext('2d');
@@ -170,4 +123,8 @@ btnCapturar.addEventListener('click', () => {
     const dataURL = canvas.toDataURL('image/jpeg', 0.9);
     fotoFinal.src = dataURL;
 });
-}
+
+</script>
+
+</body>
+</html>

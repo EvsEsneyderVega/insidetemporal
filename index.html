@@ -18,6 +18,13 @@
 	<link rel="stylesheet" href="css/style.css" />
 
 	<style>
+		.videoc,
+		.imgc {
+			max-width: 400px;
+			border: 2px solid #000;
+			margin: 10px;
+		}
+
 		#signature-pad {
 			border: 1px solid #fff;
 			width: 400px;
@@ -730,7 +737,7 @@
 						<section>
 
 							<div class="inner">
-								
+
 								<div class="form-heading">
 									<h3>Observaciones</h3>
 									<span>6/7</span>
@@ -744,8 +751,23 @@
 								</div>
 
 								<div class="form-holder">
-									<button class="ui-button ui-widget ui-corner-all frm-btn" id="captura"
-											style="background-color: #43ccba; color: #fff; border: none;">Captura</button>
+									<select id="optselectorCamara">
+										<option value="user">Cámara Frontal</option>
+										<option value="environment" selected>Cámara Trasera</option>
+									</select>
+									<button id="btniniciar" type="button">Iniciar Cámara</button>
+									<br><br>
+
+									<video id="video" autoplay playsinline></video>
+									<br>
+									<button id="btncapturar" type="button">📷 Capturar Imagen Técnica</button>
+									<br>
+									<canvas id="canvas" style="display:none;"></canvas>
+									<br>
+									<h3>Resultado:</h3>
+									<img id="fotoFinal" alt="Imagen técnica capturada">
+									<!-- <button class="ui-button ui-widget ui-corner-all frm-btn" id="captura"
+										style="background-color: #43ccba; color: #fff; border: none;">Captura</button> -->
 
 								</div>
 
