@@ -495,9 +495,10 @@ if(data.vehiculo.fotoEvidencia){
     y=10;
     marcaDeAgua(doc);
     addSectionHeader(`6 EVIDENCIA FOTOGRAFICA`, 5, 9);
+    console.log(data.vehiculo.fotoEvidencia);
     for(let i=0;i<data.vehiculo.fotoEvidencia.length;i++){
         
-        doc.addImage(data.vehiculo.fotoEvidencia[i], "JPEG", 15, y+28*i, 45, 25);
+        doc.addImage(data.vehiculo.fotoEvidencia[i], "JPEG", 15, y+50*i, 90, 50);
     }
     
 }
