@@ -202,10 +202,10 @@ $(function () {
             data.vehiculo.gnv = document.getElementById("gnv").value;
             data.vehiculo.fechagnv = document.getElementById("fechagnv").value;
             data.vehiculo.vez = document.getElementById("vez").value;
-            
+
 
             // Si quieres enviar el formulario automáticamente:
-            $("#form-total").submit();
+            genPDF(data);
             
         }
     });
