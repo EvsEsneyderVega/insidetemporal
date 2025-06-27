@@ -45,6 +45,7 @@ const data = {
                 conversiongnv:'',
                 fechagnv:'2025-12-03',
                 gnv:'SI',
+                fotoEvidencia:[],
                 presiones:{
                             eje1I:'128.1',
                             eje1D:'133.2',
@@ -66,7 +67,8 @@ const data = {
                             eje5D2:'136.6',
                             repI:'133.3',
                             repD:'134.4',
-                },
+                        },
+                
     observaciones:[],
     autorizacion:false,
     recepcionista:'pepito perez',
@@ -126,7 +128,7 @@ const data = {
     ],
     aviso:['El CDA actuando en calidad de responsable del tratamiento de sus datos personales, informa que los datos personales suministrados por Usted con ocasión de su acceso a los servicios ofrecidos serán incluidos en distintas bases de datos y serán utilizados para las siguientes finalidades: a) Transferencia al RUNT de los resultados de la revisión, sea esta aprobada o rechazada. b) Transferencia a la Autoridad ambiental de la región – SECRETARÍA DE AMBIENTE, de la información de los propietarios, poseedor o tenedor del vehículo, información del vehículo y de los valores del análisis de emisiones contaminantes. c) Transferencia al organismo de transito del municipio, de las inconsistencia encontradas entre la información documental y la presencia física del vehículo, d) Transferencia a la Superintendencia de puertos y transporte, de la información de los propietarios, poseedor o tenedor del vehículo, información del vehículo y de todos los resultados de la inspección, e) Sistema de control y vigilancia (Sicov) en nuestro caso CI2 recuerde que todas las actividades de inspección realizadas incluyendo resultados son monitoreados (filmados) y usted se encuentra filmado por esta entidad y son enviados a esta entidad, f) entrega de los resultados de las pruebas al Organismo Nacional de Acreditación de Colombia ONAC cuando este lo solicite. Para cualquier información sobre este aviso de privacidad, de la ley aplicable o para el ejercicio de cualquiera de los derechos derivados de la protección de sus datos personales, incluyendo sin limitación sus derechos de acceso, rectificación, y supresión (siempre que no exista un mandato legal o contractual que faculte al CDA para continuar con el tratamiento directamente), usted se podrá contactar en Soacha a los teléfonos 3132005852'],
     privacidad:['De conformidad con lo previsto en la Ley Estatutaria 1581 de 2012 y el Decreto 1377 de 2013, el que firma autoriza a (CDA PUENTE ARANDA 12-44 S.A.S.) a dar tratamiento de los datos personales que sean pertinentes y adecuados para la realización y el registro de la RTMyEC de acuerdo con la normatividad vigente a los CDA: a) Envío de avisos, propaganda o publicidad sobre nuestros servicios. b) Notificación de vencimiento de la RTMyEC. c) al uso de la información personal recolectada para finalidades iguales, análogas o compatibles con aquellas para las cuales se recogieron los datos personales inicialmente. d) Desarrollo de propuestas comerciales de servicios ofrecidos por CDA a sus clientes. e) servicio al cliente y realizar estudios de mercadeo. Autorizo que el Centro de Diagnóstico Automotor, utilice la información consignada en el presente documento con fines comerciales, cumpliendo con lo establecido en la ley 1581 de 2012 y el Decreto Reglamentario 1377 de 2013 SI______NO______'],
-    fotoEvidencia:[]
+    
     
 };
 let doc;
@@ -488,10 +490,15 @@ y += 3;
 doc.text(`Nombre y apellidos:`, 6, y);
 doc.text(`Recepcionista:`, 102, y);
 
-if(data.fotoEvidencia){
+if(data.vehiculo.fotoEvidencia){
     doc.addPage();
+    y=10;
     marcaDeAgua(doc);
     addSectionHeader(`6 EVIDENCIA FOTOGRAFICA`, 5, 9);
+    for(let i=0;i<data.vehiculo.fotoEvidencia.length;i++){
+        
+        doc.addImage(data.vehiculo.fotoEvidencia[i], "JPEG", 15, y+28*i, 45, 25);
+    }
     
 }
 
@@ -576,6 +583,7 @@ $(function () {
             data.vehiculo.gnv = document.getElementById("gnv").value;
             data.vehiculo.fechagnv = document.getElementById("fechagnv").value;
             data.vehiculo.vez = document.getElementById("vez").value;
+            data.vehiculo.fotoEvidencia = fotos
 
 
 
