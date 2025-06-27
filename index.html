@@ -755,17 +755,21 @@
 										<option value="user">Cámara Frontal</option>
 										<option value="environment" selected>Cámara Trasera</option>
 									</select>
-									<button id="btniniciar" type="button">Iniciar Cámara</button>
+									<button id="btniniciar" type="button" class="ui-button ui-widget ui-corner-all frm-btn">Iniciar Cámara</button>
+									<button id="btncapturar" type="button" class="ui-button ui-widget ui-corner-all frm-btn">📷 Capturar Imagen Técnica</button>
 									<br><br>
 
 									<video id="video" autoplay playsinline></video>
 									<br>
-									<button id="btncapturar" type="button">📷 Capturar Imagen Técnica</button>
+									
 									<br>
 									<canvas id="canvas" style="display:none;"></canvas>
 									<br>
 									<h3>Resultado:</h3>
-									<img id="fotoFinal" alt="Imagen técnica capturada">
+									<div class="form-holder" id="fotoFinal">
+										
+									</div>
+
 									<!-- <button class="ui-button ui-widget ui-corner-all frm-btn" id="captura"
 										style="background-color: #43ccba; color: #fff; border: none;">Captura</button> -->
 
@@ -774,7 +778,6 @@
 							</div>
 
 						</section>
-
 
 						<!-- SECTION 6 -->
 						<h2>
@@ -806,7 +809,6 @@
 
 						</section>
 
-
 					</div>
 				</form>
 			</div>
@@ -816,14 +818,9 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.steps.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
-
 	<script src="js/signature_pad.umd.min.js"></script>
-
 	<script src="js/main.js"></script>
 	<script src="js/funciones.js"></script>
-
-
-
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+
+
 $(function () {
     $("#form-total").steps({
         headerTag: "h2",
@@ -23,6 +25,7 @@ $(function () {
                 if($('#video').is(':visible')){
                     initCam();
                 }
+                console.log($('#video').is(':visible'));
             
             }, 2000);
             
@@ -78,8 +81,11 @@ function inicializarSignPad() {
     });
 }
 
+const fotos=[];
+//alert(fotos.length);
+
 function initCam(){
-    const video = document.getElementById('video');
+const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const fotoFinal = document.getElementById('fotoFinal');
 
@@ -90,7 +96,6 @@ const btnCapturar = document.getElementById('btncapturar');
 let streamActual = null;
 
 btnIniciar.addEventListener('click', () => {
-    alert("algo");
     if (streamActual) {
         streamActual.getTracks().forEach(track => track.stop());
     }
@@ -124,8 +129,8 @@ btnCapturar.addEventListener('click', () => {
     const fecha = `${ahora.getFullYear()}-${String(ahora.getMonth()+1).padStart(2, '0')}-${String(ahora.getDate()).padStart(2, '0')}`;
     const hora = `${String(ahora.getHours()).padStart(2, '0')}:${String(ahora.getMinutes()).padStart(2, '0')}`;
     const placa = placaInput.value || "SIN PLACA";
-
-    const textoSuperior = "Fotografía 1";
+    const numerofoto = parseInt(fotos.length)+1
+    const textoSuperior = "Fotografía "+ numerofoto;
     const textoInferior = `Fecha: ${fecha}, PLACA: ${placa} HORA: ${hora} `;
 
     ctx.font = "30px Arial";
@@ -168,6 +173,11 @@ btnCapturar.addEventListener('click', () => {
 
     // Exportar
     const dataURL = canvas.toDataURL('image/jpeg', 0.9);
-    fotoFinal.src = dataURL;
+    fotos.push(dataURL);
+    fotoFinal.innerHTML="";
+    for(let i=0;i<fotos.length;i++){
+        fotoFinal.innerHTML += `<img id="" alt="Imagen técnica capturada" src="${fotos[i]}" ></img>`;
+    }
+    //fotoFinal.src = dataURL;
 });
 }
