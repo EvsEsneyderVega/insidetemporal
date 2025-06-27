@@ -483,6 +483,7 @@ y += 15;
 
 doc.line(14, y, 57, y);
 doc.text(`Firma: `, 6, y);
+doc.addImage(data.propietario.firma,6,y-16,25,15);
 doc.line(114, y, 157, y);
 doc.text(`Firma: `, 102, y);
 y += 3;
@@ -492,13 +493,13 @@ doc.text(`Recepcionista:`, 102, y);
 
 if(data.vehiculo.fotoEvidencia){
     doc.addPage();
-    y=10;
+    y = 15;
     marcaDeAgua(doc);
     addSectionHeader(`6 EVIDENCIA FOTOGRAFICA`, 5, 9);
     console.log(data.vehiculo.fotoEvidencia);
     for(let i=0;i<data.vehiculo.fotoEvidencia.length;i++){
         
-        doc.addImage(data.vehiculo.fotoEvidencia[i], "JPEG", 15, y+50*i, 90, 50);
+        doc.addImage(data.vehiculo.fotoEvidencia[i], "JPEG", 15, y+55*i, 90, 50);
     }
     
 }
@@ -557,8 +558,10 @@ $(function () {
             data.propietario.departamento = document.getElementById("deptoPropietario").value;
             data.propietario.ciudad = document.getElementById("ciudadProp").value;
             data.propietario.direccion =  document.getElementById("direccion").value;
-            data.propietario.correo = document.getElementById("correo").value;
-            data.propietario.firma = 
+            data.propietario.correo = document.getElementById("correo").value; 
+             const dataURL = signaturePad.toDataURL();
+             data.propietario.firma = dataURL
+
             //vehiculo
             data.vehiculo.fecha = new Date().toISOString().slice(0, 19).replace('T', ' ');
             data.vehiculo.placa = document.getElementById("placa").value;
@@ -585,6 +588,7 @@ $(function () {
             data.vehiculo.fechagnv = document.getElementById("fechagnv").value;
             data.vehiculo.vez = document.getElementById("vez").value;
             data.vehiculo.fotoEvidencia = fotos
+            
 
 
 
