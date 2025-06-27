@@ -178,6 +178,7 @@ $(function () {
             data.propietario.direccion =  document.getElementById("direccion").value;
             data.propietario.correo = document.getElementById("correo").value;
             //vehiculo
+            data.vehiculo.fecha = new Date().toISOString().slice(0, 19).replace('T', ' ');
             data.vehiculo.placa = document.getElementById("placa").value;
             data.vehiculo.vin  = document.getElementById("vin").value;
             data.vehiculo.pais = document.getElementById("paisvehicl").value;
@@ -195,8 +196,12 @@ $(function () {
             data.vehiculo.nopasajeros  = document.getElementById("nopasajeros").value;
             data.vehiculo.blindado = document.getElementById("blindado").checked?"SI":"NO";
             data.vehiculo.ense = document.getElementById("ense").checked?"SI":"NO";
-
-
+            data.vehiculo.potencia = document.getElementById("potencia").value;
+            data.vehiculo.carroceria  = document.getElementById("carroceria").value;
+            data.vehiculo.fechamatricula = document.getElementById("fechamatricula").value;
+            data.vehiculo.gnv = document.getElementById("gnv").value;
+            data.vehiculo.fechagnv = document.getElementById("fechagnv").value;
+            data.vehiculo.vez = document.getElementById("vez").value;
             
 
             // Si quieres enviar el formulario automáticamente:
