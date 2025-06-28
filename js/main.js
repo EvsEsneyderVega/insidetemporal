@@ -134,6 +134,17 @@ const data = {
 let doc;
 
 // ============ FUNCIONES AUXILIARES ============
+/**
+ * 
+ * @param {String} text 
+ * @param {int} x 
+ * @param {int} y 
+ * @param {int} width 
+ * @param {int} height 
+ * @param {int} fontSize 
+ * @param {boolean} isBold 
+ * @param {int} padding 
+ */
 function addTextWithBox(text, x, y, width, height, fontSize = 8, isBold = false, padding = 1) {
     // Configurar estilo de fuente
     doc.setFontSize(fontSize);
@@ -188,7 +199,6 @@ function genPDF(data){
     userPermissions: ["print"]}
 });
 let y=0;
-
 marcaDeAgua(doc);
 // ============ ENCABEZADO ============
 doc.setFontSize(12);
@@ -483,7 +493,7 @@ y += 15;
 
 doc.line(14, y, 57, y);
 doc.text(`Firma: `, 6, y);
-doc.addImage(data.propietario.firma,6,y-16,25,15);
+doc.addImage(data.propietario.firma,16,y-14,24,14);
 doc.line(114, y, 157, y);
 doc.text(`Firma: `, 102, y);
 y += 3;
